@@ -102,9 +102,9 @@ include 'connection.php';
                          
                          <th>Year</th>
                      </tr>
-                     <tr>
+                     <tr> 
                      <?php 
-                    
+                   
                      $country_ = $_POST['country'];
                      $diocese_ = $_POST['diocese'];       
                      $year_ = $_POST['doa'];
@@ -113,10 +113,10 @@ include 'connection.php';
                              while($rows3 = mysqli_fetch_array($result3, MYSQLI_ASSOC)) {
                                  $name = $rows3['fname'];    
                                  $yeardoa = $rows3['doa'];
-                                
+                
                                  $country3 = $rows3['country'];
                                ?>
-                     </tr>
+                    
                      <tr>
                             <td> <?php echo $name; ?> </td>
                             
@@ -124,7 +124,7 @@ include 'connection.php';
                          
                             <td> <?php echo $yeardoa; ?> </td>
                      </tr>
-                     
+                             </tr>      
                       <?php
 }
                              
