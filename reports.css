@@ -1,0 +1,85 @@
+.container_c{
+    width: 960px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 10px;
+    padding: 20px;
+}
+.wrapper {
+    margin-bottom: 20px;
+}
+h1{
+    font-family: verdana;
+    color: rgb(84, 84, 172);
+}
+.data {
+    width: 800px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.data select {
+    width: 200px;
+    padding: 3px;
+    margin: 20px 0px;
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: white;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+
+}
+.submit {
+    margin-top: 18px;
+    width: 100px;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+button {
+     margin-top: 18px;
+    width: 100px;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+.table {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    clear: both;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    
+}
+.table th {
+    width: 200px;
+    font-family: verdana;
+    font-size: 13px;
+    color: rgb(84,84,172);
+    padding: 3px 20px 3px 20px;
+}
+
+.table td {
+    text-align: left;
+    width: 300px;
+    font-family: verdana;
+    padding: 3px 68px 3px 68px;
+    
+}
