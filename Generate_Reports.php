@@ -113,7 +113,7 @@ include 'connection.php';
                              while($rows3 = mysqli_fetch_array($result3, MYSQLI_ASSOC)) {
                                  $name = $rows3['fname'];    
                                  $yeardoa = $rows3['doa'];
-                                 $diocese3 = $row3['diocese'];
+                                
                                  $country3 = $rows3['country'];
                                ?>
                      </tr>
