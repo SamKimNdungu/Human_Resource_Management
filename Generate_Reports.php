@@ -1,5 +1,6 @@
 <?php 
 include 'connection.php';
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 ?>
 <!DOCTYPE html>
 
@@ -44,7 +45,7 @@ include 'connection.php';
                     <option>Country</option>
                     <?php
                     
-                    $query= "SELECT * FROM data_entry";
+                    $query= "SELECT DISTINCT(country) FROM data_entry";
                     $result = mysqli_query($connect,$query);
                     while ($rows = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                        
@@ -61,7 +62,7 @@ include 'connection.php';
                    <option>Diocese</option>
                     <?php
                     
-                    $query1= "SELECT * FROM data_entry";
+                    $query1= "SELECT  DISTINCT(diocese) FROM data_entry";
                     $result1 = mysqli_query($connect,$query1);
                     while ($rows1 = mysqli_fetch_array($result1, MYSQLI_ASSOC)) {
                        
@@ -69,7 +70,7 @@ include 'connection.php';
                         $rowsData1 = $rows1['diocese'];
                  
                     ?>
-                    <option name="<?php echo $diocese;?>"><?php echo $rowsData1;?></option>
+                    <option name="<?php echo $diocese;?>"><?php echo $diocese;?></option>
                     <?php
                     }
                     ?>
@@ -78,7 +79,7 @@ include 'connection.php';
                    <option>Year</option>
                     <?php
                     
-                    $query2= "SELECT * FROM data_entry";
+                    $query2= "SELECT DISTINCT(doa) FROM data_entry";
                     $result2 = mysqli_query($connect,$query2);
                     while ($rows2 = mysqli_fetch_array($result2, MYSQLI_ASSOC)) {
                        
@@ -92,7 +93,6 @@ include 'connection.php';
                     ?>
                 </select>  
        
-                
                  <input type="submit" class="submit">
                  <table border="1" class="table">
                      <tr>
@@ -104,7 +104,7 @@ include 'connection.php';
                      </tr>
                      <tr> 
                      <?php 
-                   
+
                      $country_ = $_POST['country'];
                      $diocese_ = $_POST['diocese'];       
                      $year_ = $_POST['doa'];
@@ -113,7 +113,6 @@ include 'connection.php';
                              while($rows3 = mysqli_fetch_array($result3, MYSQLI_ASSOC)) {
                                  $name = $rows3['fname'];    
                                  $yeardoa = $rows3['doa'];
-                
                                  $country3 = $rows3['country'];
                                ?>
                     
@@ -124,7 +123,7 @@ include 'connection.php';
                          
                             <td> <?php echo $yeardoa; ?> </td>
                      </tr>
-                             </tr>      
+                             
                       <?php
 }
                              
